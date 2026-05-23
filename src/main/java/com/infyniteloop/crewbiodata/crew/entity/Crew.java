@@ -1,13 +1,18 @@
 package com.infyniteloop.crewbiodata.crew.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import enums.CrewType;
+import enums.MaritalStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "crew")
@@ -21,7 +26,7 @@ public class Crew {
     @Column(length = 30, nullable = false)
     private String firstName;
 
-    @Column(length = 30, nullable = false)
+    @Column(length = 30)
     private String middleName;
 
     @Column(length = 30, nullable = false)
@@ -36,17 +41,16 @@ public class Crew {
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
-    @Column(length = 12)
-    private String mobileNumber;
+    @OneToMany(mappedBy = "crew")
+    @JsonManagedReference
+    private List<Phone> phoneNumber;
 
-    @Column(length = 100)
-    private String address;
-
-    @Column(length = 100)
-    private String permanentAddress;
+    @OneToMany(mappedBy = "crew")
+    @JsonManagedReference
+    private List<Address> address;
 
     @Column(length = 10)
-    private String maritalStatus;
+    private MaritalStatus maritalStatus;
 
     @Column(length = 3)
     private String bloodGroup;
@@ -57,14 +61,22 @@ public class Crew {
     @Column(length = 30)
     private String designation;
 
-    @Column(length = 4)
-    private String crewType;   // Loco, Guard, etc.
+    private CrewType crewType;   // Loco, Guard, etc.
 
-    @Column(length = 4)
+    @Column(length = 20)
     private String orgType;
 
-    @Column(length = 4)
-    private String hqCode;
+    @Column(length = 20)
+    private String lobby;
+
+    @Column(length = 20)
+    private String division;
+
+    @Column(length = 20)
+    private String zone;
+
+    @Column(length = 20)
+    private String hq;
 
     @Column(length = 1)
     private String cadre;

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.infyniteloop</groupId>
-	<artifactId>crewbiodata</artifactId>
+	<artifactId>crewbiodata-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
@@ -94,6 +94,12 @@
             <artifactId>lombok-mapstruct-binding</artifactId>
             <version>0.2.0</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.infyniteloop.commons</groupId>
+            <artifactId>referencedata</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
     </dependencies>
