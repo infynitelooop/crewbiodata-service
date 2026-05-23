@@ -95,18 +95,19 @@ public class CrewServiceImpl implements CrewService {
                 // Convert birthDate to LocalDate
                 LocalDate localBirthDate = LocalDate.parse(record.get("BIRTH_DATE_D"));
 
-                crew.setDateOfBirth(localBirthDate);
-                crew.setMobileNumber(record.get("MOBILE_NO_N"));
-                crew.setAddress(record.get("CALLSERV_ADD_V"));
-                crew.setPermanentAddress(record.get("PERMANENT_ADD_V"));
-                crew.setMaritalStatus(record.get("MARITAL_STTS_V"));
-                crew.setBloodGroup(record.get("BLOOD_GROUP_C"));
-                crew.setEmergencyContactNumber(record.get("PERSONAL_MOBL_N"));
-                crew.setDesignation(record.get("CREW_DESIG_V"));
-                crew.setCrewType(record.get("CREW_TYPE_C"));
-                crew.setOrgType(record.get("ORG_TYPE_C"));
-                crew.setHqCode(record.get("HQ_CODE_C"));
-                crew.setCadre(record.get("CREW_CADRE_V"));
+                // TODO: Implement when required
+//                crew.setDateOfBirth(localBirthDate);
+//                crew.setPhoneNumber(List.of(record.get("MOBILE_NO_N")));
+//                crew.setAddress(record.get("CALLSERV_ADD_V"));
+//                crew.setAddress(record.get("PERMANENT_ADD_V"));
+//                crew.setMaritalStatus(record.get("MARITAL_STTS_V"));
+//                crew.setBloodGroup(record.get("BLOOD_GROUP_C"));
+//                crew.setEmergencyContactNumber(record.get("PERSONAL_MOBL_N"));
+//                crew.setDesignation(record.get("CREW_DESIG_V"));
+//                crew.setCrewType(record.get("CREW_TYPE_C"));
+//                crew.setOrgType(record.get("ORG_TYPE_C"));
+//                crew.setHqCode(record.get("HQ_CODE_C"));
+//                crew.setCadre(record.get("CREW_CADRE_V"));
 
                 // Skip empty crewIds (bad data)
                 if (crew.getCrewId() != null && !crew.getCrewId().isBlank()) {
