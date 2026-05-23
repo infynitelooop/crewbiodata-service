@@ -1,0 +1,80 @@
+# =========================
+# Java / Spring Boot
+# =========================
+*.class
+*.log
+
+target/
+*.jar
+*.war
+*.ear
+
+# =========================
+# Maven
+# =========================
+.mvn/
+mvnw
+mvnw.cmd
+
+# Maven local repo metadata (optional)
+.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+*.iml
+*.iws
+out/
+
+# =========================
+# Eclipse (if used by others)
+# =========================
+.project
+.classpath
+.settings/
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Spring Boot
+# =========================
+application-local.properties
+application-dev.properties
+application-prod.properties
+
+# Secrets / configs
+**/application-secrets.properties
+**/secrets.properties
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Test / Coverage
+# =========================
+coverage/
+*.exec
+
+# =========================
+# Docker (optional)
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.swp

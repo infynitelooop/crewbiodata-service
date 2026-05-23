@@ -1,6 +1,14 @@
 package com.infyniteloop.crewbiodata.crew.dto;
 
+import com.infyniteloop.crewbiodata.crew.entity.Address;
+import com.infyniteloop.crewbiodata.crew.entity.Phone;
+import enums.CrewType;
+import enums.Gender;
+import enums.MaritalStatus;
+import jakarta.persistence.Column;
+
 import java.time.LocalDate;
+import java.util.List;
 
 public record CrewRequest(
         String crewId,
@@ -8,17 +16,20 @@ public record CrewRequest(
         String middleName,
         String lastName,
         String fathersName,
-        String gender,
+        Gender gender,
         LocalDate dateOfBirth,
-        String mobileNumber,
-        String address,
+        List<Phone> phoneNumber,
+        List<Address> address,
         String permanentAddress,
-        String maritalStatus,
+        MaritalStatus maritalStatus,
         String bloodGroup,
         String emergencyContactNumber,
         String designation,
-        String crewType,
+        CrewType crewType,
         String orgType,
-        String hqCode,
+        String lobby,
+        String division,
+        String zone,
+        String hq,
         String cadre
 ) {}
