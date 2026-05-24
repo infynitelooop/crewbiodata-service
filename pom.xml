@@ -67,7 +67,7 @@
             <version>2.8.12</version>
         </dependency>
 
-        <!-- For pupulating vrew biodata from csv -->
+        <!-- For pupulating crew biodata from csv -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-csv</artifactId>
@@ -102,6 +102,24 @@
             <version>1.0.0</version>
         </dependency>
 
+        <!-- Kafka -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-kafka</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-kafka-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Common custom dependencies -->
+        <dependency>
+            <groupId>com.infyniteloop.commons</groupId>
+            <artifactId>referencedata</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
 	<build>

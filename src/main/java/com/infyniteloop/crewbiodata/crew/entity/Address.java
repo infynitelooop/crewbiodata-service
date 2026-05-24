@@ -23,7 +23,7 @@ import java.util.UUID;
 public class Address {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     @Column(name = "id")
     private UUID id;
 
