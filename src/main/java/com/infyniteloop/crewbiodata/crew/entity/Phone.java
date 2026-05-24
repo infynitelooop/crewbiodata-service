@@ -22,7 +22,7 @@ import java.util.UUID;
 @Setter
 public class Phone {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     @Column(name = "id")
     private UUID id;
 
