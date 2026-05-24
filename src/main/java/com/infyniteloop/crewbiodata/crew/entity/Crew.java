@@ -20,7 +20,7 @@ import java.util.List;
 @Setter
 public class Crew {
     @Id
-    @Column(length = 10)
+    @Column(length = 10, nullable = false)
     private String crewId;
 
     @Column(length = 30, nullable = false)
